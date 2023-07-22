@@ -1,0 +1,31 @@
+.containerShoe{
+    padding: 5rem 0;
+}
+
+.firstSection{
+    width: 70%;
+    background-color: red;
+    margin: auto;
+    padding: 10px 10px 10rem 10px
+}
+.ShoeContent{
+    
+    display: flex;
+    
+    justify-content: space-between;
+
+}
+.shoeImg{
+    width: 360px;
+    height: 460px;
+}
+
+.shoeImg img {
+    width: 100%;
+    height: 100%;
+}
+.shoeBody {
+    background-color: yellow;
+    width: 60%;
+    height: 70%;
+}

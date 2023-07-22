@@ -1,0 +1,11 @@
+.containerShoes {
+    padding: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 10rem 10px
+
+}

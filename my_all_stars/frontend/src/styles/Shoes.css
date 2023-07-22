@@ -1,0 +1,29 @@
+.shoesBody{
+    background-color: #BAD7E9;
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 40px;
+}
+
+.shoesImg {
+    width: 15rem;
+    height: 20rem;
+}
+
+.shoesImg img{
+    transition: all 1s ease-in ;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.shoesImg:hover{
+    transition: all 1s ease-out ;
+}
+
+.shoesContent {
+    margin-top: 10px;
+    line-height: 30px;
+}
+.shoesAmount {
+    font-weight: bold;
+}

@@ -1,0 +1,38 @@
+.container_bnav {
+    background-color: #060047;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 20px;
+}
+
+.bnav {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+
+}
+.bnav p {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0 10px;
+}
+
+.bnav_rx {
+    display: flex;
+    align-items: center;
+
+}
+.bnav_rx a{
+   width: 30px;
+   height: 30px;
+   padding: 0 5px;
+}
+.bnav_rx img{
+    width: 100%;
+    height: 100%;
+ }

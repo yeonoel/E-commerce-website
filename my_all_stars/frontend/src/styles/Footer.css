@@ -1,0 +1,34 @@
+.containerFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E9E9EA;
+    padding: 1rem 0;
+}
+.FooterContent {
+    justify-content: space-around;
+    display: flex;
+    width: 50%;
+    
+}
+
+.contentFooterImg_p {
+    width: 125px;
+    height: 30px;
+}
+.contentFooterImg_om {
+    width: 205px;
+    height: 40px;
+}
+.contentFooterImg_mc {
+    width: 80px;
+    height: 40px;
+}
+.contentFooterImg_visa {
+    width: 80px;
+    height: 40px;
+}
+.contentFooterImg_p img, .contentFooterImg_om img, .contentFooterImg_visa img, .contentFooterImg_mc img{
+    width: 100%;
+    height: 100%;
+}

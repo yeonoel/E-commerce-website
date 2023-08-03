@@ -4,20 +4,35 @@
 
 .firstSection{
     width: 70%;
-    background-color: red;
     margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
     padding: 10px 10px 10rem 10px
 }
+
+#selectionQuantity{
+    width: 80%;
+    height: 50px;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-weight: 700;
+}
+
+.shoeTitle {
+    border-bottom: 1px solid rgb(183, 182, 180);
+    padding-bottom: 20px;
+}
 .ShoeContent{
-    
     display: flex;
-    
-    justify-content: space-between;
+    width: 100%;
+    height: 100%;
 
 }
-.shoeImg{
-    width: 360px;
-    height: 460px;
+ .shoeImgContent {
+    width: 50%;
+    height: 100%;
+
 }
 
 .shoeImg img {
@@ -25,7 +40,78 @@
     height: 100%;
 }
 .shoeBody {
-    background-color: yellow;
-    width: 60%;
-    height: 70%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 1rem;
+    padding:  10px 0 12px 0;
 }
+
+.status, .shoeDescription, .amounrPrince, .containerSizeQuantity {
+    margin-top: 40px;
+}
+.sizeQuantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.shoeSizeContent {
+    border: 2px solid #EB455F;
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+}
+.btnQuantity {
+    background-color: #EB455F;
+    color: #fff;
+    border: none;
+    margin-left: 1px;
+    font-weight: 500;
+}
+.shoeSizeitem {
+    font-weight: 600;
+}
+.shoeQuantityContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+}
+.shoeQuantityContent span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #EB455F;
+}
+
+.btnQuantity, .shoeQuantityContent span {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+
+}
+.amounrPrince {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.containerBtnAddToCard {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnAddToCard {
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    background-color: #EB455F;
+    height: 50px;
+    width: 100%;
+
+}
+
+/*  comments styling */

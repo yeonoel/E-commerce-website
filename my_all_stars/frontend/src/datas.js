@@ -8,6 +8,14 @@ import img7 from './assets/7.jpg';
 import img8 from './assets/8.jpg';
 import img9 from './assets/9.jpg';
 
+import img10 from './assets/10.jpg';
+import img11 from './assets/15.jpg';
+import img12 from './assets/19.jpg';
+import img13 from './assets/24.jpg';
+import img14 from './assets/30.jpg';
+import img15 from './assets/33.jpg';
+import img16 from './assets/30.jpg';
+
 
 export const datas = [
     {
@@ -98,6 +106,91 @@ export const datas = [
         review: 4,
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
+    },
+
+
+
+
+
+    {
+        id : 10,
+        idSeller: 1,
+        name : 'All Star black white',
+        image: img10,
+        amount: '19$',
+        review: 4,
+        description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
+
+    } ,
+    {
+        id : 11,
+        idSeller: 1,
+        name : 'All Star black white',
+        image: img11,
+        amount: '19$',
+        review: 4,
+        description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
+
+    },
+    {
+        id : 12,
+        idSeller: 1,
+        name : 'All Star black white',
+        image: img12,
+        amount: '19$',
+        review: 4,
+        description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
+
+    },
+     {
+        id : 13,
+        idSeller: 1,
+        name : 'All Star black white',
+        image: img13,
+        amount: '19$',
+        review: 4,
+        description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
+
+    },
+     {
+        id : 14,
+        idSeller: 1,
+        name : 'All Star black white',
+        image: img14,
+        amount: '19$',
+        review: 4,
+        description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
+
+    }, 
+    {
+        id : 15,
+        idSeller: 1,
+        name : 'All Star black white',
+        image: img15,
+        amount: '19$',
+        review: 4,
+        description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
+
+    } ,
+    {
+        id : 16,
+        idSeller: 1,
+        name : 'All Star black white',
+        image: img16,
+        amount: '19$',
+        review: 4,
+        description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
+
+    },
+    {
+        id : 16,
+        idSeller: 1,
+        name : 'All Star black white',
+        image: img16,
+        amount: '19$',
+        review: 4,
+        description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
+
     }
     // {
     //     id : 11,
@@ -124,26 +217,76 @@ export const datas = [
 export const review = [
     {
         id: 1,
-        userid: 1,
+        firstname: 'yeo',
         idShoe: 1,
         reviewText: "review text",
-        rating: 1,
+        rating: 1
     },
     {
         id: 2,
-        userid: 1,
-        idShoe: 1,
+        firstname: 'light',
+        idShoe: 2,
         reviewText: "review text 1",
-        rating: 2,
+        rating: 2
     },
     {
         id: 3,
-        userid: 1,
+        firstname: 'lomi',
+        idShoe: 3,
+        reviewText: "review text 2",
+        rating: 4
+    },
+    {
+        id: 4,
+        firstname: 'koss',
+        idShoe: 3,
+        reviewText: "review text",
+        rating: 1
+    },
+    {
+        id: 5,
+        firstname: 'deness',
+        idShoe: 2,
+        reviewText: "review text 1",
+        rating: 2
+    },
+    {
+        id: 6,
+        firstname: 'kim',
         idShoe: 1,
         reviewText: "review text 2",
-        rating: 4,
+        rating: 4
     }
 ];
+
+
+
+export const client = [
+    {
+        id: 1,
+        firstname: 'yeo',
+        lastname: 'noel',
+        email: "review text",
+        password: "asword"
+    },
+    {
+        id: 2,
+        firstname: 'test',
+        lastname: 'testt',
+        email: "review text",
+        password: "asword"
+    },
+    {
+        id: 3,
+        firstname: 'heart',
+        lastname: 'heeerr',
+        email: "review text",
+        password: "asword"
+    }
+];
+
+
+
 
 export const seller = [
     {

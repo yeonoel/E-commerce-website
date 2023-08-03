@@ -192,24 +192,6 @@ export const datas = [
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
     }
-    // {
-    //     id : 11,
-    //     name : 'All Star black white',
-    //     amount: '14$',
-    //     review: 4,
-    // },
-    // {
-    //     id : 12,
-    //     name : 'All Star black white',
-    //     amount: '31$',
-    //     review: 4,
-    // },
-    // {
-    //     id : 13,
-    //     name : 'All Star black white',
-    //     amount: '45$',
-    //     review: 4,
-    // }
 
 ];
 
@@ -219,39 +201,46 @@ export const review = [
         id: 1,
         firstname: 'yeo',
         idShoe: 1,
-        reviewText: "review text",
+        reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis consectetur libero, id fermentum tellus facilisis eu. Aenean interdum luctus elementum. Nulla consequat ipsum eget posuere tincidunt. Phasellus auctor nec turpis at tincidunt. Etiam venenatis augue ut felis faucibus, quis dignissim dui faucibus. Vivamus eget facilisis erat. Duis euismod in purus vel placerat. Aliquam ac dictum tellus, ut sodales purus. In aliquet, erat a eleifend vehicula, justo libero lacinia velit, in vulputate odio massa in metus. Vivamus sit amet rhoncus sapien. Suspendisse eu sagittis ipsum. Duis id ex odio.",
         rating: 1
     },
     {
         id: 2,
         firstname: 'light',
         idShoe: 2,
-        reviewText: "review text 1",
-        rating: 2
+        reviewText: "Etiam fermentum arcu eget lectus eleifend, vel bibendum libero faucibus. Proin eu turpis nulla. Maecenas venenatis ac quam a finibus. Nullam auctor libero sit amet justo tristique, vitae pellentesque erat rhoncus. Donec a erat et purus rhoncus porttitor. Integer hendrerit aliquet velit, vitae convallis metus bibendum quis.",
+        rating: 4
     },
     {
         id: 3,
-        firstname: 'lomi',
+        firstname: 'kassongonodjata',
         idShoe: 3,
-        reviewText: "review text 2",
+        reviewText: 'Lorem Proin eu turpis nulla. Maecenas venenatis ac quam a finibus. Nullam auctor libero sit amet justo tristique, vitae pellentesque erat rhoncus. Donec a erat et purus rhoncus porttitor. Integer hendrerit aliquet velit, vitae convallis metus bibendum quis',
         rating: 4
     },
     {
         id: 4,
         firstname: 'koss',
         idShoe: 3,
-        reviewText: "review text",
-        rating: 1
+        reviewText: "Maecenas venenatis ac quam a finibus. Nullam auctor libero sit amet justo tristique, text",
+        rating: 3
     },
     {
         id: 5,
         firstname: 'deness',
         idShoe: 2,
-        reviewText: "review text 1",
+        reviewText: "Maecenas venlibero sit amet justo tristique, text 1",
         rating: 2
     },
     {
         id: 6,
+        firstname: 'deness',
+        idShoe: 2,
+        reviewText: "Maecenas venlibero sit amet justo tristique, text 1",
+        rating: 3
+    },
+    {
+        id: 7,
         firstname: 'kim',
         idShoe: 1,
         reviewText: "review text 2",

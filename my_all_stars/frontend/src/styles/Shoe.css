@@ -2,9 +2,12 @@
     padding: 5rem 0;
 }
 
-.firstSection{
+.containerComments, .firstSection, .containerDetails {
     width: 70%;
     margin: auto;
+}
+.firstSection{
+    
     display: flex;
     align-items: center;
     height: 100%;
@@ -103,6 +106,7 @@
     justify-content: center;
 }
 .btnAddToCard {
+    cursor: pointer;
     font-size: 20px;
     border: none;
     border-radius: 5px;
@@ -115,3 +119,65 @@
 }
 
 /*  comments styling */
+
+.commentItem {
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+.commentItem span {
+    background-color: #060047 ;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    margin-right: 10px;
+}
+.commentItem h3 {
+   display: flex;
+   align-items: center;
+
+}
+
+.containerComments {
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.letComments {
+    width: 80%;
+    background-color: #FCFFE7;
+    padding: 0 20px;
+}
+#inputComment {
+    width: 100%;
+    border: none;
+    resize: none;
+}
+.submitComment {
+    background-color: #060047;
+    width: 100px;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+}
+/* Détails styling   */
+
+
+.containerDetails, .containerComments {
+    background-color: #f6f6f6;
+    padding: 20px 15px;
+    border-top-right-radius: 10px ;
+    border-top-left-radius: 10px ;
+    
+}
+
+.containerDetails h2, .containerComments h2{
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+.detailsText {
+    padding: 30px;
+}

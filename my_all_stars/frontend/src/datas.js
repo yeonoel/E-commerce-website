@@ -307,3 +307,8 @@ export const seller = [
     }
 
 ]
+
+
+export const panierData = [
+    
+]

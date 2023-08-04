@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+
 import logo from '../../assets/logo.png';
 import card from '../../assets/card.png'
 import styled from 'styled-components'
@@ -69,6 +71,9 @@ const CardItemNumber = styled.span`
     margin-left: -10px;
 `
 const Header = () => {
+
+    const cartItems = useSelector(state => state.card);
+    const cartItemsCount = cartItems.length; // Obtenir le nombre de produits dans le panier
     return (
         <ContainerHeader>
            <BodyHeader>
@@ -87,7 +92,7 @@ const Header = () => {
                     <SignLink to="/singup">SignUp</SignLink>
                 </ContainerSign>
                 <CardIcon>
-                <img src={card}   alt="card Icon" /> <CardItemNumber>0</CardItemNumber>
+                <img src={card}   alt="card Icon" /> <CardItemNumber>{cartItemsCount}</CardItemNumber>
                 </CardIcon>
            </BodyHeader>
         </ContainerHeader>

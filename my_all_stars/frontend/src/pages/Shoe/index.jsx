@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { datas, review } from "../../datas";
-import { toast } from 'react-toastify';
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../action";
 import 'react-toastify/dist/ReactToastify.css';
+import { ReactNotifications, Store } from 'react-notifications-component';
+import 'react-notifications-component/dist/theme.css'
 import '../../styles/Shoe.css'
 
 const Shoe = () => {
@@ -10,20 +13,28 @@ const Shoe = () => {
     const [quantity1, setQUantity1] = useState(0);
     const [quantity2, setQUantity2] = useState(0);
     
-    console.log(id)
     const shoe = datas.find(shoe => shoe.id === parseInt(id));
     const reviewsShoe = review.filter(review => review.idShoe === parseInt(id));
 
-    console.log(reviewsShoe);
+    const dispatch = useDispatch();
+
 
     const handleAddToCart = () => {
-        // Mettez ici votre logique d'ajout au panier
-    
-        // Affichez la notification en haut de l'écran
-        toast.success('Produit ajouté au panier !', {
-          position: 'top-center',
-          autoClose: 2000, // La notification se fermera automatiquement après 2 secondes
+        Store.addNotification({
+        
+        message: "Product added",
+        type: "Success",
+        insert: "top",
+        container: "top-right",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+            duration: 5000,
+            onScreen: true
+        }
         });
+
+        dispatch(addToCart(shoe));
       };
     const renderSartRating = (rating) => {
         const stars = [];
@@ -60,6 +71,7 @@ const Shoe = () => {
     }
     return (
         <div className="containerShoe">
+            <ReactNotifications />
             <section className="firstSection">
                 <div className="ShoeContent">
                     <div className="shoeImgContent">

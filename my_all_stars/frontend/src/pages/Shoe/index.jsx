@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { datas, review } from "../../datas";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../action";
+import { addToCart } from "../../store";
 import 'react-toastify/dist/ReactToastify.css';
 import { ReactNotifications, Store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css'
@@ -11,7 +11,6 @@ import '../../styles/Shoe.css'
 const Shoe = () => {
     const { id } = useParams();
     const [quantity1, setQUantity1] = useState(0);
-    const [quantity2, setQUantity2] = useState(0);
     
     const shoe = datas.find(shoe => shoe.id === parseInt(id));
     const reviewsShoe = review.filter(review => review.idShoe === parseInt(id));
@@ -22,7 +21,7 @@ const Shoe = () => {
     const handleAddToCart = () => {
         Store.addNotification({
         
-        message: "Product added",
+        message: "Product added to cart",
         type: "Success",
         insert: "top",
         container: "top-right",
@@ -33,7 +32,7 @@ const Shoe = () => {
             onScreen: true
         }
         });
-
+        console.log(shoe)
         dispatch(addToCart(shoe));
       };
     const renderSartRating = (rating) => {
@@ -60,15 +59,6 @@ const Shoe = () => {
         setQUantity1(quantity1 + 1);
     }
 
-    const quantityInfe2 = (e) => {
-        e.preventDefault();
-        setQUantity2(quantity2 - 1)
-    }
-
-    const quantitySup2 = (e) => {
-        e.preventDefault();
-        setQUantity2(quantity2 + 1);
-    }
     return (
         <div className="containerShoe">
             <ReactNotifications />
@@ -76,7 +66,7 @@ const Shoe = () => {
                 <div className="ShoeContent">
                     <div className="shoeImgContent">
                         <div className="shoeImg">
-                            <img src={shoe.image}  alt="destination page"/>
+                            <img src={shoe.image}  alt="destination page"/> 
                         </div>
                     </div>
                     <div className="shoeBody">
@@ -91,28 +81,22 @@ const Shoe = () => {
                             
                                 <div className="containerSizeQuantity">
                                     <p>Size EUR:</p>
-                                    <div className="sizeQuantity">
-                                        <div className="shoeSizeContent">
-                                            <div className="shoeSizeitem">
-                                                33-34
-                                            </div>
-                                        </div>
-                                        <div className="shoeQuantityContent">
-                                            <button onClick={quantityInfe1} className="btnQuantity"> - </button> <span>{quantity1}</span>  <button onClick={quantitySup1} className="btnQuantity"> + </button>
-                                        </div>
+                                    {
+                                        shoe.sizes.map((size) => (
+                                            <div key={size} className="sizeQuantity">
+                                                <div className="shoeSizeContent">
+                                                    <div className="shoeSizeitem">
+                                                        {size}
+                                                    </div>
+                                                </div>
+                                                <div className="shoeQuantityContent">
+                                                    <button onClick={quantityInfe1} className="btnQuantity"> - </button> <span>{quantity1}</span>  <button onClick={quantitySup1} className="btnQuantity"> + </button>
+                                                </div>
 
-                                    </div>
-                                    <div className="sizeQuantity">
-                                        <div className="shoeSizeContent">
-                                            <div className="shoeSizeitem">
-                                                41-42
                                             </div>
-                                        </div>
-                                        <div className="shoeQuantityContent">
-                                            <button onClick={quantityInfe2} className="btnQuantity"> - </button> <span>{quantity2}</span>  <button onClick={quantitySup2} className="btnQuantity"> + </button>
-                                        </div>
-
-                                    </div>
+                                        ))
+                                    }
+                                    
 
                                 </div>
 

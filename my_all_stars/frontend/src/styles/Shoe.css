@@ -1,5 +1,5 @@
 .containerShoe{
-    padding: 5rem 0;
+    padding: 2rem 0;
 }
 
 .containerComments, .firstSection, .containerDetails {
@@ -7,10 +7,8 @@
     margin: auto;
 }
 .firstSection{
-    
     display: flex;
     align-items: center;
-    height: 100%;
     padding: 10px 10px 10rem 10px
 }
 
@@ -30,12 +28,10 @@
     display: flex;
     width: 100%;
     height: 100%;
-
 }
- .shoeImgContent {
-    width: 50%;
-    height: 100%;
 
+.shoeImgContent {
+    width: 50%;
 }
 
 .shoeImg img {

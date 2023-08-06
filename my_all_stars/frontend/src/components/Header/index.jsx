@@ -1,9 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 import logo from '../../assets/logo.png';
 import card from '../../assets/card.png'
 import styled from 'styled-components'
+import '../../styles/Header.css'
 
 const ContainerHeader = styled.div`
     display: flex;
@@ -65,15 +67,15 @@ const SearchBtn =  styled.button`
 const CardIcon = styled.div`
     display: flex;
 `
-const CardItemNumber = styled.span`
-    color: red;
-    margin-top: -15px;
-    margin-left: -10px;
-`
+
 const Header = () => {
 
-    const cartItems = useSelector(state => state.card);
-    const cartItemsCount = cartItems.length; // Obtenir le nombre de produits dans le panier
+    const cartItems = useSelector(state => state.cart);
+    const cartItemsCount = cartItems.length; // Obtenir le nombre de produits dans le panier du client
+
+    console.log(cartItems);
+    
+
     return (
         <ContainerHeader>
            <BodyHeader>
@@ -91,8 +93,12 @@ const Header = () => {
                     <SignLink to="/signin">SignIn</SignLink>
                     <SignLink to="/singup">SignUp</SignLink>
                 </ContainerSign>
+                
                 <CardIcon>
-                <img src={card}   alt="card Icon" /> <CardItemNumber>{cartItemsCount}</CardItemNumber>
+                <img src={card}   alt="card Icon" /> 
+                <Link className="cartLink" to={'/cart'}>
+                    {cartItemsCount}
+                </Link>
                 </CardIcon>
            </BodyHeader>
         </ContainerHeader>

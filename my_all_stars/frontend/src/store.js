@@ -1,6 +1,6 @@
 
-import {createStore} from 'react-redux';
-import product from 'immer';
+import {createStore} from 'redux';
+import produce from 'immer';
 
 const initalState = {
     cart: []
@@ -16,11 +16,11 @@ export const addToCart = (product) => {
 
 function reducer( state = initalState, action ) {
     if (action.type === 'ADD_TO_CART') {
-        return product (state, (draft) => {
+        return produce(state, (draft) => {
             draft.cart.push(action.payload)
         })
     }
-
+    return state;
 };
 
 
@@ -28,3 +28,4 @@ function reducer( state = initalState, action ) {
 const store = createStore(reducer);
 
 export default store;
+

@@ -1,0 +1,40 @@
+
+.formcontainer {
+    background-color: #EEEEEE;
+    width: 20%;
+    height: 300px;
+    margin: auto;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    margin-top: calc(25% - 15%);
+
+}
+
+
+.login_form {
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.btnInputs {
+    background-color: #ffff;
+    margin-top: 20px;
+
+    
+}
+.formcontainer p {
+    text-align: center;
+    color: #EB455F;
+}
+.login_form input {
+    height: 50px;
+
+}
+.btnlogin {
+    background-color: #060047;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+
+}

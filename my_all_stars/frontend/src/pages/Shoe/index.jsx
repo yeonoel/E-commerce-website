@@ -2,39 +2,38 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { datas, review } from "../../datas";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../store";
+import { addToCart, removefromCart } from "../../store";
 import 'react-toastify/dist/ReactToastify.css';
 import { ReactNotifications, Store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css'
 import '../../styles/Shoe.css'
 
+
+
 const Shoe = () => {
     const { id } = useParams();
-    const [quantity1, setQUantity1] = useState(0);
-    
+    const [quantity, setQuantity] = useState({});
+    const [openPopup, setOpenPopup] =  useState(false)
+    const sizeSelected = {};
+
     const shoe = datas.find(shoe => shoe.id === parseInt(id));
     const reviewsShoe = review.filter(review => review.idShoe === parseInt(id));
+    
 
     const dispatch = useDispatch();
-
+    const handleOutsideClick = (e) => {
+        if (openPopup && !e.target.closest(".popup")) {
+            setOpenPopup(false)
+        }
+    }
+    const handleClickSize = () => {
+        setOpenPopup(true);
+    }
 
     const handleAddToCart = () => {
-        Store.addNotification({
-        
-        message: "Product added to cart",
-        type: "Success",
-        insert: "top",
-        container: "top-right",
-        animationIn: ["animate__animated", "animate__fadeIn"],
-        animationOut: ["animate__animated", "animate__fadeOut"],
-        dismiss: {
-            duration: 5000,
-            onScreen: true
-        }
-        });
-        console.log(shoe)
-        dispatch(addToCart(shoe));
+        setOpenPopup(true);
       };
+
     const renderSartRating = (rating) => {
         const stars = [];
         while ( rating > 0 ) {
@@ -45,22 +44,96 @@ const Shoe = () => {
         return stars;
     }
 
+    const closePopup = ()  => {
+        setOpenPopup(false)
+    }
+
     // const submitComment = (e) => {
     //     e.preventDefault();
 
     // }
-    const quantityInfe1 = (e) => {
-        e.preventDefault();
-        setQUantity1(quantity1 - 1)
+    const quantityInfe = (shoeId, size) => {
+
+        setQuantity((prevQuantities) => {
+            const newQuantities = { ...prevQuantities};
+            newQuantities[size] = (newQuantities[size] || 0) - 1;
+            return newQuantities;
+        });
+
+        Store.addNotification({
+        
+            message: "Product removed from cart",
+            type: "danger",
+            insert: "top",
+            container: "top-right",
+            animationIn: ["animate__animated", "animate__fadeIn"],
+            animationOut: ["animate__animated", "animate__fadeOut"],
+            dismiss: {
+                duration: 5000,
+                onScreen: true
+            }
+            });
+
+            
+            shoe.sizes.forEach((size) => {
+                if(quantity[size] && quantity[size] > 0) {
+                    sizeSelected[size] = quantity[size];
+                    
+                };
+            });
+            const shoeWithsizeSelected = {
+                ...shoe,
+                sizeSelected,
+            };
+
+            console.log(shoeWithsizeSelected)
+
+            const shoeWithsizeSelectedId =  shoeWithsizeSelected.id;
+            console.log(shoeWithsizeSelectedId)
+        dispatch(removefromCart(shoeId, size));
     }
 
-    const quantitySup1 = (e) => {
-        e.preventDefault();
-        setQUantity1(quantity1 + 1);
+
+
+    const quantitySup = (shoeId, size) => {
+
+        Store.addNotification({
+        
+            message: "Product removed from cart",
+            type: "success",
+            insert: "top",
+            container: "top-right",
+            animationIn: ["animate__animated", "animate__fadeIn"],
+            animationOut: ["animate__animated", "animate__fadeOut"],
+            dismiss: {
+                duration: 5000,
+                onScreen: true
+            }
+            });
+        
+        setQuantity((prevQuantities) => {
+            const newQuantities = { ...prevQuantities};
+            newQuantities[size] = (newQuantities[size] || 0) + 1;
+            console.log(quantity)
+            return newQuantities;
+        });
+
+
+        
+        sizeSelected[size] = (sizeSelected[size] || 0) + 1;
+
+         
+            const shoeWithsizeSelected = {
+                ...shoe,
+                sizeSelected,
+            };
+            dispatch(addToCart(shoeWithsizeSelected, shoeId, size));
+        
+        
     }
 
     return (
-        <div className="containerShoe">
+        <div onClick={handleOutsideClick} className="containerShoe">
             <ReactNotifications />
             <section className="firstSection">
                 <div className="ShoeContent">
@@ -81,31 +154,85 @@ const Shoe = () => {
                             
                                 <div className="containerSizeQuantity">
                                     <p>Size EUR:</p>
+                                    <div className="sizeQuantity">
+
                                     {
                                         shoe.sizes.map((size) => (
-                                            <div key={size} className="sizeQuantity">
-                                                <div className="shoeSizeContent">
+                                                <div onClick={() => handleClickSize()} className="shoeSizeContent">
                                                     <div className="shoeSizeitem">
                                                         {size}
                                                     </div>
                                                 </div>
-                                                <div className="shoeQuantityContent">
-                                                    <button onClick={quantityInfe1} className="btnQuantity"> - </button> <span>{quantity1}</span>  <button onClick={quantitySup1} className="btnQuantity"> + </button>
-                                                </div>
-
-                                            </div>
+                                                
                                         ))
                                     }
-                                    
+                                </div> 
+                                    <section>
+                                        {
+                                            openPopup && (
+                                                <div className="popup_overlay">
+                                                    <div  className="popup">
+                                                        <span>Choose Size and Quantity</span>
+                                                     <span className="close-icon" onClick={closePopup}>×</span>
 
+                                                        {
+                                                            shoe.sizes.map((size) => (
+                                                                <div className="popupShoeSizeContent">
+                                                                    <div className="popupShoeSizeitem">
+                                                                        {size}
+                                                                    </div>
+                                                                    <div className="shoeQuantityContent">
+                                                                        {
+                                                                            quantity[size] ? (
+
+                                                                                <button onClick={() => quantityInfe(shoe.id, size)} className="btnQuantity" disabled={quantity[size] <= 0}> 
+                                                                                - 
+                                                                                </button>
+                                                                            ) : (
+                                                                                <button  onClick={() => quantityInfe(shoe.id ,size)} className="zeroQuantity" disabled={true}> 
+                                                                                - 
+                                                                                </button>
+                                                                            )
+                                                                        }
+
+                                                                        {
+                                                                            shoe.sizeSelected[size] ? (
+                                                                                 <span > {(shoe.sizeSelected[size])} </span> 
+
+                                                                            ) : (
+                                                                                <span > {(quantity[size] ||  0)} </span> 
+                                                                            )
+                                                                        }
+
+
+                                                                        <button onClick={() => quantitySup(shoe.id, size)} className="btnQuantity"> 
+                                                                        + 
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                
+                                                        ))
+                                                        }
+                                                        <div className="popupBtnsAfterQuantyAndSize">
+                                                            <button className="btnshop btncontinueShop">
+                                                                Continue your shopping
+                                                            </button>
+                                                            <button className=" btnShop BtnFinalizeOrder">
+                                                                Finalize the order
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            )
+                                        }
+                                    </section>
                                 </div>
 
-                            
-                             
                         </div>
 
                         <div className="containerBtnAddToCard">
-                            <button onClick={handleAddToCart} className="btnAddToCard"> Add To Card</button>
+                            <button onClick={() => handleAddToCart()} className="btnAddToCard"> Add To Card</button>
                         </div>
                         
                     </div>
@@ -181,3 +308,7 @@ const Shoe = () => {
 }
 
 export default Shoe;
+
+
+
+

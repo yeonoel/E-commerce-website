@@ -1,14 +1,17 @@
 .containerFooter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #E9E9EA;
     padding: 1rem 0;
 }
 .FooterContent {
+    display: flex;
+    align-items: center;
     justify-content: space-around;
     display: flex;
     width: 50%;
+    margin: auto;
     
 }
 

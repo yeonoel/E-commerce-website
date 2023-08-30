@@ -23,8 +23,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img1,
-        amount: '250$',
+        amount: 250,
         review: 4,
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0},
         sizes: ['36-37', '38-39', '40-41'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
     },
@@ -33,8 +34,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img2,
-        amount: '100$',
+        amount: 100,
         review: 3,
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0},
         sizes: ['36-37', '38-39', '40-41', '42-43'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
     },
@@ -44,8 +46,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img4,
-        amount: '50$',
+        amount: 50,
         review: 4,
+        sizeSelected :{'36-37': 0},
         sizes: ['36-37'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
@@ -55,9 +58,10 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img5,
-        amount: '200$',
+        amount: 200,
         review: 2,
-        sizes: ['36-37', '38-39', '40-41', '42-43'],
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0},
+        sizes: ['36-37', '38-39', '40-41'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
     },
@@ -66,9 +70,10 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img6,
-        amount: '25$',
+        amount: 25,
         review: 4,
-        sizes: ['36-37', '38-39', '40-41', '42-43'],
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0},
+        sizes: ['36-37', '38-39', '40-41'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
     },
@@ -77,8 +82,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img3,
-        amount: '80$',
+        amount: 80,
         review: 4,
+        sizeSelected :{'40-41': 0, '42-43': 0},
         sizes: [ '40-41', '42-43'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
@@ -88,8 +94,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img7,
-        amount: '20$',
+        amount: 20,
         review: 2,
+        sizeSelected :{'36-37': 0},
         sizes: ['36-37'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
     },
@@ -98,8 +105,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img8,
-        amount: '15$',
+        amount: 15,
         review: 3,
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0, '42-43': 0},
         sizes: ['36-37', '38-39', '40-41', '42-43'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
@@ -109,8 +117,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img9,
-        amount: '19$',
+        amount: 19,
         review: 4,
+        sizeSelected :{'36-37': 0},
         sizes: ['36-37'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
@@ -121,8 +130,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img10,
-        amount: '19$',
+        amount: 19,
         review: 4,
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0},
         sizes: ['36-37', '38-39', '40-41'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
@@ -132,8 +142,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img11,
-        amount: '19$',
+        amount: 19,
         review: 4,
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0, '42-43':0},
         sizes: ['36-37', '38-39', '40-41', '42-43'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
@@ -143,8 +154,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img12,
-        amount: '19$',
+        amount: 19,
         review: 4,
+        sizeSelected :{'42-43':0, '40-41': 0},
         sizes: ['36-37', '40-41', '42-43'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
@@ -154,8 +166,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img13,
-        amount: '19$',
+        amount: 19,
         review: 4,
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0, '42-43': 0},
         sizes: ['36-37', '38-39', '40-41', '42-43'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
@@ -165,8 +178,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img14,
-        amount: '19$',
+        amount: 19,
         review: 4,
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0, '42-43': 0},
         sizes: ['36-37', '38-39', '40-41', '42-43'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
@@ -176,8 +190,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img15,
-        amount: '19$',
+        amount: 19,
         review: 4,
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0, '42-43': 0},
         sizes: ['36-37', '38-39', '40-41', '42-43'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
@@ -187,8 +202,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img16,
-        amount: '19$',
+        amount: 19,
         review: 4,
+        sizeSelected :{'36-37': 0, '38-39':0},
         sizes: ['36-37', '38-39'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 
@@ -198,8 +214,9 @@ export const datas = [
         idSeller: 1,
         name : 'All Star black white',
         image: img16,
-        amount: '19$',
+        amount: 19,
         review: 4,
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0, '42-43': 0},
         sizes: ['36-37', '38-39', '40-41', '42-43'],
         description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
 

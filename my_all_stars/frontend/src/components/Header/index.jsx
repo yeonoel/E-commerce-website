@@ -71,8 +71,13 @@ const CardIcon = styled.div`
 const Header = () => {
 
     const cartItems = useSelector(state => state.cart);
-    const cartItemsCount = cartItems.length; // Obtenir le nombre de produits dans le panier du client
+    let cartItemsCount = 0; // Obtenir le nombre de produits dans le panier du client
 
+    for (const shoe of cartItems ) {
+        for (const size in shoe.sizeSelected) {
+            cartItemsCount += shoe.sizeSelected[size]
+        }
+    }
     console.log(cartItems);
     
 
@@ -82,7 +87,7 @@ const Header = () => {
                 <ContainerImg>
                         {/* Utilisez le composant ImgLogo ici */}
                         <ImgLogo src={logo} alt="logo" />
-                </ContainerImg> 
+                </ContainerImg>
                 <ContainerInput>
                         <InputSearch 
                         id="input"

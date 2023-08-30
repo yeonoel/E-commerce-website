@@ -12,6 +12,14 @@
     justify-content: space-between;
     height: 200px;
     background-color: #BAD7E9;
+}
+.cart_fisrtSection_totalItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #BAD7E9;
+    font-weight: 800;
 
 }
 .customerInfo, .OrderInfo, .DeliveryInfo {
@@ -35,10 +43,72 @@
 }
 
 .cart_ShoesSelected {
+    margin-top: 20px;
     display: flex;
     height: 200px;
+    position: relative;
 }
+.cart_ShoesSelected .removeShoes {
+    background-color: #840204;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    border: none;
+    position: absolute;
+    left: -11px;
+    top: -10px;
+    cursor: pointer;
+
+    border-radius: 50%;
+}
+
 
 /* .cart_secondSection {
     display:  ;
 } */
+.qtity {
+    padding: 0 8px;
+}
+.amount {
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart_orderRecap {
+    margin-top: 30px;
+    text-align: right;padding-right: 50px;
+    border-bottom: 2px solid #E1EAEF;
+    font-size: 20px;
+    font-weight: 800;
+    padding-bottom: 50px;
+}
+
+.btns_continue_checkout {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 500px;
+}
+
+.btn_checkout, .btn_continue {
+    background-color: #840204;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    text-decoration: none;
+    border: none;
+    color: #FFF;
+    border-radius: 5px;
+    height: 50px;
+    width: 20%;
+    cursor: pointer;
+}
+.btn_continue {
+    
+}
+
+.btn_checkout {
+    background-color: #060047;
+}

@@ -20,7 +20,7 @@ const Shoes = ({ _id, name, amount, review, image }) => {
                                 {review} review <i></i>
                             </div>
                             <div className="shoesAmount">
-                                {amount}
+                                {amount} $
                             </div>
 
                         </div>

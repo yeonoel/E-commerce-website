@@ -1,0 +1,85 @@
+* {
+    text-decoration: none;
+}
+
+.formcontainerpayementmethodpup {
+    height: calc(100vh - 240px);
+    padding: 50px 0;
+}
+.formcontainerpayementmethod {
+    margin: 100px auto 100px auto;
+    background-color: #EEEEEE;
+    width: 20%;
+    height: 300px;
+    padding: 20px 30px;
+
+}
+
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.divLivraisonPayement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 20px;
+}
+.divLivraisonPayement input{
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+.divLivraisonPayement span{
+    display: flex;
+    align-items: center;
+    background-color: #ffff;
+    width: 90%;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+.divLivraisonPayement span:checked .divLivraisonPayement input:checked{
+   background-color: red;
+}
+
+.divLivraisonPayement span, select{
+    
+    border: none;
+}
+
+.formcontainerpayementmethod p  {
+    text-align: center;
+    color: #EB455F;
+}
+.formcontainerpayementmethod p:nth-child(1)  {
+    font-weight: 800;
+    font-size: 20px;
+}
+.formcontainerpayementmethod p  a{
+    text-decoration: none;
+    color: #EB455F;
+}
+.choosepayementmethod {
+    height: 50px;
+    padding-left: 20px;
+
+}
+.choosepayementmethod .choosemethod {
+    padding: 30px 2px;
+}
+
+.btnlogin {
+    background-color: #060047;
+    color: #fff;
+    margin-top: 40px;
+    cursor: pointer;
+
+}

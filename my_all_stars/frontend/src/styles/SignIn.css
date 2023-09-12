@@ -1,12 +1,13 @@
-
-.formcontainer {
+.formcontainerppin {
+    height: 100vh;
+    padding-top: 10%;
+}
+.formcontainersignin {
     background-color: #EEEEEE;
     width: 20%;
     height: 300px;
     margin: auto;
     padding: 20px 30px;
-    margin-bottom: 30px;
-    margin-top: calc(25% - 15%);
 
 }
 
@@ -23,12 +24,15 @@
 
     
 }
-.formcontainer p {
+.formcontainersignin p {
     text-align: center;
+}
+.formcontainersignin p a{
     color: #EB455F;
 }
 .login_form input {
     height: 50px;
+    text-decoration: none;
 
 }
 .btnlogin {

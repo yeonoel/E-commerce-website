@@ -11,11 +11,11 @@ const ContainerHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 10px;
+    padding: 20px 0px;
 
 `
 const BodyHeader = styled.div`
-    width: 70%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,26 +40,26 @@ const ContainerInput = styled.div`
 `
 const InputSearch = styled.input`
     width: 70%;
-    height: 30px;
+    height: 40px;
     border-radius: 4px;
     border: 1px solid #000;
 
 `
 const ContainerSign = styled.div`
-    width: 20%;
+    width: 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 `
 const SignLink = styled.a`
-    
+    cursor: pointer;
 `
 
 const SearchBtn =  styled.button`
     width: 70px;
     boder-radius: 3px;
     border: 3px solid #EB455F;
-    height: 30px;
+    height: 40px;
     background : #EB455F;
     color: #fff;
     margin-left: 5px;
@@ -86,7 +86,7 @@ const Header = () => {
            <BodyHeader>
                 <ContainerImg>
                         {/* Utilisez le composant ImgLogo ici */}
-                        <ImgLogo src={logo} alt="logo" />
+                        <Link to={'/'}> <ImgLogo src={logo} alt="logo" /> </Link>
                 </ContainerImg>
                 <ContainerInput>
                         <InputSearch 
@@ -95,8 +95,8 @@ const Header = () => {
                         <SearchBtn> Search </SearchBtn>
                 </ContainerInput>
                 <ContainerSign>
-                    <SignLink to="/signin">SignIn</SignLink>
-                    <SignLink to="/singup">SignUp</SignLink>
+                    <SignLink > <Link to={"/signin"}> Sign In</Link> </SignLink>
+                    <SignLink > <Link to={"/signup"}> Sign Up </Link></SignLink>
                 </ContainerSign>
                 
                 <CardIcon>

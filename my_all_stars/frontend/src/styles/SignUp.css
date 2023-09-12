@@ -1,0 +1,76 @@
+.formcontainerSignUp {
+    height: 100vh;
+    padding: 50px 0;
+}
+
+.logoContainer {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+}
+.logoContainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+.lastFirstInput {
+    display: flex;
+    justify-content: space-between;
+
+}
+.lastFirstInput input{
+    width: 46%;
+
+}
+
+.formContainerSignup {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    padding: 20px 30px;
+
+}
+
+
+.login_form {
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.btnInputs {
+    background-color: #ffff;
+    margin-top: 20px;
+    font-size: 20px;
+    border-color: #EEEEEE;
+
+}
+.formcontainersignup p  {
+    text-align: center;
+    color: #EB455F;
+}
+.formcontainersignup p:nth-child(1)  {
+    font-weight: 800;
+    font-size: 20px;
+}
+.formcontainersignup p  a{
+    text-decoration: none;
+    color: #EB455F;
+}
+.login_form input {
+    height: 50px;
+    padding-left: 20px;
+
+}
+.btnlogin {
+    background-color: #060047;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+
+}

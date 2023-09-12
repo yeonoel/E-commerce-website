@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { datas, review } from "../../datas";
 import { useDispatch } from "react-redux";
 import { addToCart, removefromCart } from "../../store";
@@ -74,7 +74,6 @@ const Shoe = () => {
             }
             });
 
-            
             shoe.sizes.forEach((size) => {
                 if(quantity[size] && quantity[size] > 0) {
                     sizeSelected[size] = quantity[size];
@@ -150,7 +149,7 @@ const Shoe = () => {
                         </div>
                         <div>
                             <p className="status">InStock <span>{}</span></p>
-                            <p className="amounrPrince">{shoe.amount}</p>
+                            <p className="amounrPrince">$ {shoe.amount}</p>
                             
                                 <div className="containerSizeQuantity">
                                     <p>Size EUR:</p>
@@ -209,18 +208,17 @@ const Shoe = () => {
                                                                         + 
                                                                         </button>
                                                                     </div>
-                                                                </div>
-                                                                
-                                                                
+                                                                </div>                                                                
                                                         ))
                                                         }
                                                         <div className="popupBtnsAfterQuantyAndSize">
-                                                            <button className="btnshop btncontinueShop">
+                                                        <Link to={'/Accueil'} className="btncontinueShop">
                                                                 Continue your shopping
-                                                            </button>
-                                                            <button className=" btnShop BtnFinalizeOrder">
+                                                            </Link>
+                                                            <Link to={'/PayementMethod'} className="BtnFinalizeOrder">
                                                                 Finalize the order
-                                                            </button>
+                                                            </Link>
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>

@@ -16,6 +16,10 @@ import img14 from './assets/30.jpg';
 import img15 from './assets/33.jpg';
 import img16 from './assets/30.jpg';
 
+import img17 from './assets/xx1.jpg';
+import img18 from './assets/xx2.jpg';
+import img19 from './assets/xx3.jpg';
+
 
 export const datas = [
     {
@@ -210,11 +214,36 @@ export const datas = [
 
     },
     {
-        id : 16,
+        id : 17,
         idSeller: 1,
         name : 'All Star black white',
-        image: img16,
-        amount: 19,
+        image: img17,
+        amount: 209,
+        review: 4,
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0, '42-43': 0},
+        sizes: ['36-37', '38-39', '40-41', '42-43'],
+        description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
+
+    },
+    {
+        id : 18,
+        idSeller: 1,
+        name : 'All Star black white',
+        image: img18,
+        amount: 129,
+        review: 4,
+        sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0, '42-43': 0},
+        sizes: ['36-37', '38-39', '40-41', '42-43'],
+        description: 'Inspired by the iconic looks of 90s girl bands, these platform Chucks are sure to turn heads. Canvas can be as refined or edgy as youd like, while a double stacked sole takes you higher.'
+
+    } ,
+    
+    {
+        id : 19,
+        idSeller: 1,
+        name : 'All Star black white',
+        image: img19,
+        amount: 300,
         review: 4,
         sizeSelected :{'36-37': 0, '38-39':0, '40-41': 0, '42-43': 0},
         sizes: ['36-37', '38-39', '40-41', '42-43'],

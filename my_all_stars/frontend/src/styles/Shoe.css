@@ -253,8 +253,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.quantityControl {
-}
+
 .cartImgItem {
     height: 180px;
     width: 180px;
@@ -315,13 +314,12 @@
 .btncontinueShop, .BtnFinalizeOrder {
     border-radius: 5px;
     width: 40%;
-    padding: 14px 5px;
+    padding: 14px 19px;
     font-size: 15px;
 }
 .btncontinueShop {
     border: 1px solid #EB455F;
     color: #EB455F;
-
 }
 .BtnFinalizeOrder {
     border: none;

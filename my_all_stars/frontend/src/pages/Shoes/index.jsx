@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Shoes = ({ _id, name, amount, review, image }) => {
     return (                
-        <div className="">
+        <div className="allShoesContainer">
             <div className="shoesBody">
                         <Link to={`/shoe/${_id}`}>
                             <div className="shoesImg">
@@ -25,7 +25,7 @@ const Shoes = ({ _id, name, amount, review, image }) => {
 
                         </div>
                     </div>
-        </div>
+            </div>
     )
 }
 

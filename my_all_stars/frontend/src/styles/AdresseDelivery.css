@@ -1,0 +1,80 @@
+* {
+    text-decoration: none;
+}
+
+.formcontainerppup {
+    height: calc(100vh );
+    padding: 50px 0;
+}
+.formcontainersignup {
+    background-color: #EEEEEE;
+    width: 20%;
+    height: 600px;
+    margin: 70px auto 70px auto;
+    padding: 20px 30px;
+
+}
+
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.btnInputs, select {
+    background-color: #ffff;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.divLivraisonPayement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 40px;
+    
+}
+.divLivraisonPayement input{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+   
+}
+.divLivraisonPayement span{
+    display: flex;
+    align-items: center;
+    background-color: #ffff;
+    width: 100%;
+    
+    text-align: center;
+    font-size: 20px;
+    padding: 15px 30px;
+}
+
+.formcontainersignup p  {
+    text-align: center;
+    color: #EB455F;
+}
+.formcontainersignup p:nth-child(1)  {
+    font-weight: 800;
+    font-size: 20px;
+}
+.formcontainersignup p  a{
+    text-decoration: none;
+    color: #EB455F;
+}
+.login_form input, select {
+    height: 50px;
+    padding-left: 20px;
+
+}
+.btnlogin {
+    background-color: #060047;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+
+}

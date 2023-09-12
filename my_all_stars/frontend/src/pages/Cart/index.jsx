@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../../styles/Cart.css';
 import { useSelector } from "react-redux";
-import { removefromCart, addToCart } from "../../store";
+import { removefromCart, addToCart, removeById } from "../../store";
 
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -17,6 +17,9 @@ const Cart = () => {
     const sizeSelected = {};
 
     const { id } = useParams();
+    const [total, setTotal] = useState(0);
+
+
 
     let cartItemsCount = 0; // Obtenir le nombre de produits dans le panier du client
     const cartItems = useSelector(state => state.cart);
@@ -26,6 +29,20 @@ const Cart = () => {
             cartItemsCount += shoe.sizeSelected[size]
         }
     } 
+
+    
+    useEffect(() => {
+        console.log("Cart items after dispatch:", cartItems);
+        let newTotal = 0;
+
+        for (const shoe of cartItems) {
+            for (const size in shoe.sizeSelected) {
+                newTotal += shoe.sizeSelected[size] * shoe.amount; // Calcul du sous-total pour chaque taille
+            }
+        }
+
+        setTotal(newTotal); // Mettre à jour le total
+    }, [cartItems]);
     
     const dispatch = useDispatch();
     const shoe = datas.find(shoe => shoe.id === parseInt(id));
@@ -54,12 +71,7 @@ const Cart = () => {
             });
 
             
-            shoe.sizes.forEach((size) => {
-                if(quantity[size] && quantity[size] > 0) {
-                    sizeSelected[size] = quantity[size];
-                    
-                };
-            });
+            sizeSelected[size] = (sizeSelected[size] || 0) - 1; 
             const shoeWithsizeSelected = {
                 ...shoe,
                 sizeSelected,
@@ -110,9 +122,12 @@ const Cart = () => {
         
         
     }
+    const items = useSelector(state => state.cart)
 
-    const handleRemoveShoes = () => {
-
+    const handleRemoveShoes = (shoeid) => {
+        console.log(shoeid)
+        dispatch(removeById(shoeid));        
+        console.log(items);
     }
 
     return (
@@ -126,31 +141,36 @@ const Cart = () => {
                 {
                     cartItems.map((shoe) => (
                         <div key={shoe.id} className="cart_ShoesSelected">
-                            <button onClick={() => handleRemoveShoes} className="removeShoes"> X </button>
+                            <button onClick={() => handleRemoveShoes(shoe.id)} className="removeShoes"> X </button>
                             <div className="cartImgItem">
                                 <img src={shoe.image} alt="" />
                             </div>
                             <div>
                                 <h3 className="shoe_name">{shoe.name} </h3>
                             </div>
+                            
                             <div>
-                            <h3>Size and Quantity</h3>
-                            {
-                                Object.keys(shoe.sizeSelected).map((size) => (
-                                    <div key={size} className="quantityControl">
-                                        <p>{size}</p>
-                                        <div className="quantityButtons">
-                                            <button onClick={() => quantityInfe(shoe.id, size)} className="btnQuantity" disabled={shoe.sizeSelected[size] <= 0}>
-                                                -
-                                            </button>
-                                            <span className="qtity">{shoe.sizeSelected[size]}</span>
-                                            <button onClick={() => quantitySup(shoe.id, size)} className="btnQuantity">
-                                                +
-                                            </button>
+                                <h3>unit price</h3>
+                                <div className="amount">$ {shoe.amount} </div>
+                            </div>
+                            <div>
+                                <h3>Size and Quantity</h3>
+                                {
+                                    Object.keys(shoe.sizeSelected).map((size) => (
+                                        <div key={size} className="quantityControl">
+                                            <p>{size}</p>
+                                            <div className="quantityButtons">
+                                                <button onClick={() => quantityInfe(shoe.id, size)} className="btnQuantity" disabled={shoe.sizeSelected[size] <= 0}>
+                                                    -
+                                                </button>
+                                                <span className="qtity">{shoe.sizeSelected[size]}</span>
+                                                <button onClick={() => quantitySup(shoe.id, size)} className="btnQuantity">
+                                                    +
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
-                                ))
-                            }
+                                    ))
+                                }
                             </div>
                             <div>
                                 <div>
@@ -160,6 +180,8 @@ const Cart = () => {
                                 {
                                     Object.keys(shoe.sizeSelected).map((size) => (
                                         <div key={size} className="amount">
+                                            
+                                           
                                              $ {shoe.sizeSelected[size] * shoe.amount }
                                         </div>
                                     ))
@@ -174,10 +196,10 @@ const Cart = () => {
                         cartItems.length !== 0 && (
                             <div>
                                 <div className="cart_orderRecap">
-                                 Total:
+                                    <span>Total:</span>  $ {total}
                                 </div>
                                 <div className="btns_continue_checkout">
-                                    <Link to={'/'} className="btn_continue">CONTINUE TO SHOPPING</Link> <Link to={'/signIn'}  className="btn_checkout">CHECKOUT</Link>
+                                    <Link to={'/'} className="btn_continue">CONTINUE TO SHOPPING</Link> <Link to={'/signin'} className="btn_checkout">CHECKOUT</Link>
                                 </div>
                             </div>
                         )
@@ -185,9 +207,7 @@ const Cart = () => {
                 </div>
 
             </div>
-            <div>
-
-            </div>
+            
 
         </div>
     )

@@ -179,9 +179,7 @@ const Cart = () => {
                                 <h3>SubTotal</h3>
                                 {
                                     Object.keys(shoe.sizeSelected).map((size) => (
-                                        <div key={size} className="amount">
-                                            
-                                           
+                                        <div key={size} className="amount">                                         
                                              $ {shoe.sizeSelected[size] * shoe.amount }
                                         </div>
                                     ))
